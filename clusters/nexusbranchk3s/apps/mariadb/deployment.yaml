@@ -15,12 +15,8 @@ spec:
     spec:
       containers:
         - name: mariadb
-          image: mariadb:11.4
+          image: mariadb:10.11
           imagePullPolicy: IfNotPresent
-          command:
-            - /bin/bash
-            - -c
-            - "rm -rf /var/lib/mysql/* && exec docker-entrypoint.sh mariadbd"
           ports:
             - containerPort: 3306
           envFrom:
