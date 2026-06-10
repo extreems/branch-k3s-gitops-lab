@@ -33,5 +33,4 @@ spec:
               mountPath: /var/lib/mysql
       volumes:
         - name: mariadb-data
-          persistentVolumeClaim:
-            claimName: mariadb-data
+          emptyDir: {}
